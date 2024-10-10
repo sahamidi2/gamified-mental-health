@@ -1,0 +1,689 @@
+* { box-sizing: border-box; }
+
+/* SHARED CSS */
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    box-shadow: 3px 3px 3px #888888;
+    white-space: nowrap;
+}
+
+footer {
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    color: white;
+    padding: 1rem;
+    padding-bottom: 1px;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -3px 10px -3px #888888;
+}
+
+footer p {
+    font-size: 14px;
+    padding-left: .5rem;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #5E4CC5;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+body, main, div {
+    font-family: "Nunito", sans-serif;
+}
+
+.flex-container-signin, .flex-container-profile, header {
+    display: flex;
+}
+
+.hamburger {
+    width: 32px;
+    height: 32px;
+    margin-top: 22px;
+    margin-right: 1.5rem;
+}
+
+li {
+    display: inline-block;
+    margin-left: 2.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    color: white;
+    padding-top: .2rem;
+    font-size: 1rem;
+    margin-left: 10rem;
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+/* .material-icons { 
+    color: white; 
+    display: inline-flex;
+    vertical-align: top;
+    padding-right: .5rem;
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 2.2rem;
+    line-height: 28px;
+} */
+
+/* .fire-icon {
+    color: #FF7324; 
+    vertical-align: bottom;
+    font-size: 2.2rem;
+    line-height: 28px;
+} */
+
+.store {
+    width: 82px;
+    margin-right: -.5rem;
+}
+
+.coins {
+    width: 45px;
+}
+
+.fire {
+    width: 40px;
+    margin-right: .25rem;
+}
+
+a {
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+}
+
+a:visited, a, a:hover {
+    color: white;
+}
+
+.profileimage {
+    width: 55px;
+}
+
+
+/* LOGIN PAGE - CLARABELLE */
+.flex-container-signin {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: white;
+}
+
+.signin-card {
+    width: 16rem;
+    height: 26rem;
+    background-color: #5E4CC5;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.login-btn {
+    margin-left: .05rem;
+    padding: .4rem;
+    width: 11.9rem;
+    background-color: #5E4CC5;
+    border-radius: 12px;
+    border: 1.5px solid white;
+    text-align: left;
+    color: white;
+}
+
+.loginheading {
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.email, .password {
+    margin-left: .05rem;
+    font-size: 18px;
+    color: white;
+}
+
+.email {
+    margin-top: 1.1rem;
+}
+
+.password {
+    margin-top: 1.5rem;
+}
+
+.signin-btn {
+    margin-top: 3.6rem;
+    margin-left: 25%;
+    padding: .4rem;
+    width: 6rem;
+    background-color: #f6f3eb;
+    border-radius: 12px;
+    border: none;
+}
+
+
+/* PROFILE PAGE - CLARABELLE */
+.profile-body {
+    background-color: #EDEAFF;
+}
+
+.profile-name {
+    color: black;
+    margin-left: 7rem;
+    margin-top: -5.85rem;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-email {
+    color: black;
+    margin-left: 7rem;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.profile-pic {
+    width: 100px;
+}
+
+.change-pass {
+    margin-left: 7rem;
+    padding: .25rem;
+    width: 7rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: 0px 2px 2px 0px #d3d3d3;
+    font-size: 11px;
+}
+
+.mood-summary {
+    margin-top: 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 2.2rem;
+}
+
+.mood-card {
+    width: 15rem;
+    height: 11rem;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.logout {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    padding: .25rem;
+    width: 4.5rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: 0px 2px 2px 0px #d3d3d3;
+    font-size: 11px;
+}
+
+.flex-container-profile {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.profile-card {
+    width: 18rem;
+    height: 26rem;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+
+/* HOME AND STORE */ 
+/* .homepage {
+    /* background-image: url('img/background.png'); }
+*/
+
+.dog {
+    background-image: url('img/background.png');
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+    height: 39.75rem;
+    width: 94.5rem;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.dog-pic {
+    height: 25rem;
+    margin-top: 15rem;
+}
+
+.store-page {
+    background-color: #EDEAFF;
+}
+
+.store-navigator {
+    width: 70rem;
+    height: 5rem;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.clothing-btn {
+    border-radius: 20px ;
+    width: 15rem;
+    height: 4rem;
+    background-color: #5E4CC5;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+
+.necessities-btn, .pets-btn, .places-btn {
+    border-radius: 20px ;
+    width: 15rem;
+    height: 4rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+
+.store-price {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.store-price img {
+    width: 50px; 
+}
+
+.buy-button {
+    border-radius: 20px;
+    color: white;
+    background-color: #5E4CC5;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+
+.item-images {
+    width: 150px;
+}
+
+.item-box {
+    text-align: center;
+}
+
+.item-text {
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.store-price-buy {
+    display: flex;
+    align-items: center;
+    margin-left: 1.8rem;
+}
+
+.row {
+    margin-top: 1.5rem;
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 320px)
+{
+    header {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .dog {
+        background-image: url('img/croppedbg.png');
+        margin-top: 9px;
+        height: 41rem;
+        width: 100%;
+        border-radius: 22px;
+    }
+    
+    .dog-pic {
+        height: 20rem;
+        margin-top: 20rem;
+    }
+
+    .store-navigator {
+        width: 22rem;
+        height: 5rem;
+        background-color: white;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        border-radius: 20px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1.5rem;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .clothing-btn {
+        width: 6rem;
+        height: 4rem;
+        font-size: .75rem;
+    }
+    
+    .necessities-btn, .pets-btn, .places-btn {
+        width: 6rem;
+        height: 4rem;
+        font-size: .75rem;
+    }
+
+    .store-padding {
+        padding-bottom: 8rem;
+    }
+    
+}
+
+@media (min-width: 576px)
+{
+    header {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .signin-card {
+        width: 20rem;
+        height: 26rem;
+        background-color: #5E4CC5;
+        padding: 2rem;
+        border-radius: 16px;
+    }
+
+    .login-btn {
+        margin-left: .05rem;
+        padding: .4rem;
+        width: 15.85rem;
+        background-color: #5E4CC5;
+        border-radius: 12px;
+        border: 1.5px solid white;
+        text-align: left;
+        color: white;
+    }
+
+    .signin-btn {
+        margin-top: 3.6rem;
+        margin-left: 32%;
+        padding: .4rem;
+        width: 6rem;
+        background-color: #f6f3eb;
+        border-radius: 12px;
+        border: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .change-pass {
+        margin-left: 7rem;
+        padding: .25rem;
+        width: 7rem;
+    }
+    
+    .mood-summary {
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 6.5rem;
+    }
+    
+    .mood-card {
+        width: 26rem;
+        height: 20rem;
+        margin-left: 1.45rem;
+        margin-top: 3rem;
+    }
+    
+    .logout {
+        margin-left: 11.8rem;
+    }
+    
+    .profile-card {
+        width: 32rem;
+        height: 36rem;
+    }
+
+    .dog {
+        background-image: url('img/background.png');
+        display: flex;
+        justify-content: center;
+        margin-top: 9px;
+        height: 39.75rem;
+        width: 94.5rem;
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+    
+    .dog-pic {
+        height: 25rem;
+        margin-top: 15rem;
+    }
+
+    .store-navigator {
+        width: 32rem;
+        height: 5rem;
+    }
+
+    .clothing-btn {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1rem;
+    }
+    
+    .necessities-btn, .pets-btn, .places-btn {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1rem;
+    }
+
+    .store-padding {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (min-width: 992px)
+{
+    header {
+        width: 100%;
+        height: 90px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }    
+
+    nav {
+        display: inline;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .signin-card {
+        width: 25rem;
+        height: 26rem;
+    }
+
+    .login-btn {
+        width: 20.8rem;
+    }
+
+    .signin-btn {
+        margin-left: 36%;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+    }
+
+    .profile-name {
+        margin-left: 11rem;
+        margin-top: -8rem;
+        font-size: 24px;
+    }
+    
+    .profile-email {
+        margin-left: 11rem;
+        font-size: 18px;
+    }
+    
+    .profile-pic {
+        width: 150px;
+    }
+    
+    .change-pass {
+        margin-left: 11rem;
+        padding: .25rem;
+        width: 10rem;
+        font-size: 16px;
+    }
+    
+    .mood-summary {
+        margin-top: 1rem;
+        font-size: 18px;
+        margin-left: 15rem;
+    }
+    
+    .mood-card {
+        width: 44rem;
+        height: 19rem;
+        margin-top: 4.5rem;
+    }
+    
+    .logout {
+        margin-left: 20rem;
+        width: 6rem;
+        font-size: 16px;
+    }
+    
+    .flex-container-profile {
+        padding-top: 4rem;
+    }
+    
+    .profile-card {
+        width: 50rem;
+        height: 40rem;
+    }
+
+    .dog {
+        background-image: url('img/background.png');
+        display: flex;
+        justify-content: center;
+        margin-top: 9px;
+        height: 39.75rem;
+        width: 94.5rem;
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+    
+    .dog-pic {
+        height: 25rem;
+        margin-top: 15rem;
+    }
+
+    .store-navigator {
+        width: 70rem;
+        height: 5rem;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 1.5rem;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .clothing-btn {
+        border-radius: 20px;
+        width: 15rem;
+        height: 4rem;
+        background-color: #5E4CC5;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        border: 1px solid black;
+    }
+    
+    .necessities-btn, .pets-btn, .places-btn {
+        border-radius: 20px ;
+        width: 15rem;
+        height: 4rem;
+        background-color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        border: 1px solid black;
+    }
+
+    .store-padding {
+        padding-bottom: 1rem;
+    }
+    
+}

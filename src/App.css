@@ -1,0 +1,1372 @@
+* { box-sizing: border-box; }
+
+/* SHARED CSS */
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
+    white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+footer {
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+    color: white;
+    padding: 1rem;
+    padding-bottom: 1px;
+    position: fixed;
+    bottom: 0;
+}
+
+li:hover, header h1:hover {
+    text-decoration: none;
+    color: #f6f3eb;
+}
+
+footer p {
+    font-size: 14px;
+    padding-left: .5rem;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #5E4CC5;
+}
+
+header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+body, main, div {
+    font-family: "Nunito", sans-serif;
+}
+
+.flex-container-signin, .flex-container-profile, header {
+    display: flex;
+}
+
+.hamburger {
+    width: 32px;
+    height: 32px;
+    margin-top: 22px;
+    margin-right: 1.5rem;
+}
+
+li {
+    display: inline-block;
+    margin-left: 2.25rem;
+    font-weight: 600;
+}
+
+nav ul {
+    color: white;
+    padding-top: .2rem;
+    font-size: 1rem;
+    margin-left: 10rem;
+}
+
+nav {
+    margin-right: 2rem;
+}
+
+.store {
+    width: 82px;
+    margin-right: -.75rem;
+}
+
+.coins {
+    width: 45px;
+    margin-right: .25rem;
+    margin-left: -.2rem;
+}
+
+.fire {
+    width: 40px;
+    margin-right: .25rem;
+    margin-left: -.3rem;
+}
+
+.check-smile {
+    width: 40px;
+    margin-right: .5rem;
+}
+
+.diary {
+    width: 40px;
+    margin-right: .5rem;
+}
+
+.profileimage {
+    width: 55px;
+}
+
+.selected {
+    border: 2px solid white; /* Add your desired styling for the selected emoji */
+}
+
+.bg-buttons {
+    padding: .25rem;
+    margin-right: 1rem;
+    width: 9rem !important;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 9.6rem;
+    font-size: 13px;
+}
+
+.bg-btns {
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.outfit-buttons {
+    padding: .25rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 9rem !important;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: #5E4CC5;
+    text-align: center;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 9.6rem;
+    font-size: 13px;
+}
+
+.modal {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.modal.show {
+    opacity: 1;
+}
+
+/* LOGIN PAGE - CLARABELLE */
+.signin-card {
+    width: 25rem;
+    height: 26.5rem;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -35rem;
+    background-color: #EDEAFF !important;
+    border: 2px solid black !important;
+}
+
+.signin-header {
+    text-align: center;
+    margin-bottom: 0rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.signin-head {
+    text-align: center;
+    margin-bottom: 1.5rem !important;
+    font-weight: 500 !important;
+    font-size: 2.5rem;
+}
+
+.signin-field {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: .5rem;
+    margin-left: 0.35rem;
+    width: 20rem;
+    margin-bottom: 1.5rem;
+}
+
+.signup-link {
+    color: black !important;
+    text-decoration: underline;
+}
+
+.back-btn {
+    color: black !important;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.signup-field {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.error {
+    text-align: center;
+    text-decoration: italic;
+}
+
+.signin-btn {
+    margin-top: 1.75rem !important;
+    margin-left: 25%;
+    padding: .4rem;
+    width: 6rem;
+    border-radius: 12px;
+    border: none;
+    color: black !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login-body {
+    background-image: url('/public/bg2.png') ;
+    background-size: cover;
+    height: 80vh;
+    margin-top: .5rem;
+    border-radius: 22px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* PROFILE PAGE - CLARABELLE */
+.profile-body {
+    background-color: #EDEAFF !important;
+    border-radius: 22px;
+}
+
+.profile-name {
+    color: black;
+    margin-left: 7rem;
+    margin-top: -5.85rem;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-email {
+    color: black;
+    margin-left: 7rem;
+    margin-bottom: 0.5rem;
+    margin-top: -1rem;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.profile-pic {
+    width: 100px;
+}
+
+.change-pass {
+    margin-left: 7rem;
+    padding: .25rem;
+    width: 7rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: 0px 2px 2px 0px #d3d3d3;
+    font-size: 11px;
+}
+
+.help-icon {
+    width: 3rem;
+    margin-left: 42.5rem;
+    margin-top: -7rem;
+}
+
+.help-home {
+    width: 4rem;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+}
+
+.help-home:hover {
+    width: 5rem;
+}
+
+.help-icon:hover {
+    width: 3.5rem;
+}
+
+.about-help {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.8rem;
+    margin-top: 1rem;
+    /* color: #5E4CC5; */
+}
+
+.about-help {
+    margin-top: 1.5rem;
+    font-size: 25px !important;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: .8rem;
+    text-decoration: none;
+    color: black;
+}
+
+.accordion {
+    margin-left: 2.4rem;
+    width: 50rem;
+}
+
+.back-help {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none !important;
+    margin-top: 1rem;
+    color: black;
+}
+
+.back-help:hover {
+    font-size: 18px;
+    text-decoration: none !important;
+}
+
+.back-link {
+    text-decoration: none;
+}
+
+.mood-summary {
+    margin-top: 1.5rem;
+    font-size: 22px !important;
+    font-weight: 600;
+    margin-left: 19.15rem !important;
+    padding-bottom: .8rem;
+}
+
+.chart-text {
+    font-size: 22px !important;
+    font-weight: 600;
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+}
+
+.mood-summary-list .mood-emoji {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mood-summary-list {
+    margin-left: -1.5rem;
+}
+
+.mood-card {
+    width: 53rem !important;
+    height: 13rem !important;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: .9rem !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bar-card {
+    width: 53rem !important;
+    height: 37rem !important;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: .9rem !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.diary-card {
+    width: 35rem;
+    height: 37rem;
+    background-color: #EDEAFF;
+    padding: 2rem;
+    border-radius: 22px;
+    border: 2px solid black;
+    margin-top: -2.5rem;
+    max-height: 700px; 
+    overflow-y: auto; 
+}
+
+.diary-card::-webkit-scrollbar {
+    border-radius: 22px !important;
+}
+
+.diary-p, .diary-p2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 17px;
+    font-style: italic;
+    margin-top: -.25rem;
+}
+
+.diary-p2 {
+    margin-top: 2rem;
+}
+
+.diary-form {
+    width: 30rem;
+    margin-bottom: 2rem;
+    margin-left: -.55rem;
+    border-radius: 8px;
+    border: 1.5px solid black;
+}
+
+.diary-heading {
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0.4rem;
+    margin-top: -2.5rem;
+}
+
+.item-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+  
+.diary-text {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: -2.5rem;
+    margin-top: 1.75rem;
+    margin-left: -.75rem;
+}
+
+.diarytags {
+    width: 60px;
+}
+
+.col-md-2 {
+    margin-right: .5rem;
+}
+
+.tag-title {
+    font-size: 11px;
+    text-align: center;
+}
+
+.tags-selected {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.tags-cont {
+    margin-left: 1rem;
+}
+
+.diary-btn {
+    margin-left: 10rem;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    padding: .25rem;
+    width: 3rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 9.6rem;
+    font-size: 16px;
+}
+
+.logout {
+    margin-left: 24.85rem !important;
+    margin-top: 4rem;
+    padding: .25rem;
+    width: 4.5rem;
+    border-radius: 16px;
+    border: 1px solid #5E4CC5;
+    background-color: #5E4CC5;
+    text-align: center;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 11px;
+}
+
+.flex-container-profile {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.profile-card {
+    width: 58rem !important;
+    height: 100rem !important;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.tagz-summary {
+    margin-top: 1.5rem;
+    font-size: 22px !important;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: .8rem;
+}
+
+.tagz-card {
+    width: 53rem !important;
+    height: 10rem !important;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: .9rem !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* .top-tags-section {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-left: 2rem !important; 
+    margin-right: 0rem;
+} */
+  
+.top-tags-section {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center; 
+}
+
+.top-tag {
+    margin-right: 50px; /* spacing between tags */
+}
+  
+.diarytag-img {
+    width: 60px; 
+}
+  
+.tagspan {
+    margin-left: 2px; 
+}
+
+.top-tags-section {
+    margin-left: 3rem;
+}
+
+.clear-btn {
+    padding: .2rem;
+    width: 4.5rem;
+    border-radius: 12px;
+    border: none;
+    color: black !important;
+    background-color: #EDEAFF !important;
+    border: 1px solid black !important;
+    margin-bottom: 2rem;
+}
+
+.filterby {
+    margin-right: .5rem;
+    margin-left: 7.5rem;
+}
+
+.filterbymonth {
+    margin-right: .5rem;
+    margin-left: 1.1rem;
+}
+
+.filterer {
+    padding: .2rem;
+    margin-right: .5rem;
+    width: 8rem;
+    border-radius: 12px;
+    border: none;
+    color: black !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+}
+
+.month-filter {
+    padding: .2rem;
+    margin-right: .5rem;
+    width: 8rem;
+    border-radius: 12px;
+    border: none;
+    color: black !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+}
+
+.total-entries-p {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #5E4CC5;
+}
+
+.diary-ent-card {
+    width: 22rem !important;
+    height: 8rem !important;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-left: 16.75rem !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.diary-ent-text {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.75rem;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.diary-entries-card {
+    width: 58rem !important;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.each-entry {
+    background-color: white;
+    width: 35rem;
+    padding: 2rem;
+    margin-left: 10.5rem;
+    margin-bottom: 3rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.diarypage-text {
+    text-align: center;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.tagtitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0rem;
+}
+
+.tagtitle-two {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0rem;
+    margin-top: 1rem;
+}
+
+.entrytext {
+    font-size: 16px;
+}
+
+.diaryentrydate {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tagspan {
+    font-size: 16px;
+}
+
+.back-help2 {
+    font-size: 16px;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 1.5rem;
+    text-decoration: none !important;
+    margin-top: 1rem;
+    color: black;
+}
+
+.back-help2:hover {
+    font-size: 18px;
+    text-decoration: none !important;
+}
+
+.diarytag-img {
+    width: 60px;
+}
+
+.bar-chart {
+    margin-top: 5rem;
+    width: 700px;
+    text-align: center;
+    margin-left: 4.3rem;
+}
+
+.homepage, .checkin-body {
+    background-image: url('/public/basicbg.png') ;
+    background-size: cover;
+    height: 80vh;
+    margin-top: .4rem;
+    border-radius: 22px;
+    margin-bottom: 0rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.store-page {
+    background-color: #EDEAFF;
+    height: 100vh;
+    padding-top: 30px;
+}
+
+.store-navigator {
+    width: 70rem;
+    height: 4rem;
+    background-color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1.5rem;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* CSS for store navigator buttons */
+.clothing-btn,
+.necessities-btn,
+.pets-btn,
+.places-btn {
+    border-radius: 20px;
+    width: 12rem;
+    height: 3rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    transition: background-color 0.3s; 
+}
+
+.clothing-btn:hover,
+.necessities-btn:hover,
+.pets-btn:hover,
+.places-btn:hover {
+    background-color: #5E4CC5; 
+    color: white; 
+}
+
+.clothing-btn:active,
+.necessities-btn:active,
+.pets-btn:active,
+.places-btn:active {
+    background-color: #7F79B5; 
+    color: white; 
+}
+
+
+.store-price { 
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.store-price img {
+    width: 50px; 
+}
+
+.buy-button {
+    border-radius: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    background-color: #5E4CC5;
+    margin-left: 10px;
+    border: 1px solid #5E4CC5;
+}
+
+.item-images {
+    width: 150px;
+}
+
+.pet-images {
+  height: 160px !important;
+}
+
+.place-image {
+  width: 500px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.item-text {
+    margin-bottom: 3px;
+    margin-top: 5px;
+    font-family: "Nunito", sans-serif;
+}
+
+.store-price-buy {
+    display: flex;
+    align-items: center;
+}
+
+.signup-link {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.signup-btn {
+    margin-top: 2.2rem;
+    margin-left: 27%;
+    padding: .4rem;
+    width: 10rem;
+    background-color: #f6f3eb;
+    border-radius: 12px;
+    border: none;
+}
+
+.checkin-card {
+    width: 35rem;
+    height: 25rem;
+    background-color: #EDEAFF;
+    border-radius: 22px;
+    border: 2px solid black;
+    margin-top: 1rem;
+}
+
+.arrows-name {
+    display: flex;
+    justify-content: center;
+    margin-top: -3.5rem;
+}
+
+.emoji {
+    width: 50px;
+    margin: 1rem;
+}
+
+.emojis {
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.checkin-time {
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.checkin-question {
+    font-weight: 600;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkin-btn {
+    margin-left: 13rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: .25rem;
+    width: 4.5rem;
+    border-radius: 16px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 9.6rem;
+    font-size: 20px;
+}
+
+.xbtn {
+    width: 2.5rem;
+    margin-left: 29rem;
+    margin-top: -1rem;
+}
+
+.x-btn {
+    width: 2.5rem;
+    margin-left: 31.5rem;
+    margin-top: .8rem;
+}
+
+.xbutton {
+    width: 2.5rem;
+    margin-left: 31.5rem;
+    margin-top: .8rem;
+}
+
+.selected {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+.cheering {
+    width: 20rem;
+    margin-top: -2.5rem;
+    margin-left: 7rem !important;
+}
+
+.cheer {
+    width: 18rem;
+    margin-top: -1.75rem;
+    margin-left: 8.25rem !important;
+    margin-bottom: 1.25rem;
+}
+
+.cheer-three {
+    width: 15rem;
+    margin-top: -.5rem;
+    margin-left: 9.7rem;
+}
+
+.checkin-state {
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+}
+
+.checkedin-already {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 2.5rem;
+}
+
+.change-name {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin-top: 0rem;
+}
+
+.pet-name {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 1rem;
+    margin-top: 1.25rem; 
+    display: inline-block; 
+    text-align: center;
+}
+
+.dog-view {
+    max-width: 140px;
+    max-height: 140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dog {
+    max-width: 11rem; 
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17.5rem; */ 
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 75px;
+    left: 45%;
+    right: 0;
+}
+.cow img {
+  align-self: flex-end;
+}
+
+.closet-title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 0rem;
+    margin-top: 1rem;  
+    text-align: center;
+}
+
+.place-closet {
+    width: 6.5rem !important;
+    height: 4rem;
+    background-color: white;
+    border-radius: 35px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    text-align: center;
+    display: inline-block;
+}
+
+.closet-btn-image {
+    margin-top: 1px;
+    margin-bottom: 0;
+    width: 35px;
+}
+
+.clothing-item:hover {
+    box-shadow: 0 0 8px black; /* Example hover effect */
+}
+
+.clothing-item {
+    cursor: grab; /* Change the cursor to indicate it's clickable */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    border: 2px solid transparent; /* Default border to ensure layout doesn't shift on selection */
+}
+
+.closet-selected {
+    border: 3px solid black !important; /* More prominent border */
+}
+
+
+
+.places-btn-image {
+    width: 35px;
+    margin-top: 9.5px;
+    margin-bottom: 0;
+}
+
+.closet-places-text {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 7px;
+    color: black;
+    text-decoration: none;
+}
+
+.closet-places-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.2rem;
+}
+
+.closet-div {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.places-div {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.necessity-image {
+    max-width: 6rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 75px;
+    left: 40%;
+    right: 0;
+}
+
+
+
+/* Animation for the coin count when the coin count increases */
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-15px); 
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-10px); 
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+.bounce {
+    animation: bounce 1s ease-in-out 5; 
+}
+
+.clothing-list, .places-list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.closet-card {
+    width: 35rem;
+    height: 25rem;
+    background-color: #EDEAFF;
+    border-radius: 22px;
+    border: 2px solid black;
+    margin-top: 1rem;
+    max-height: 700px; 
+    overflow-y: auto; 
+}
+
+.closet-card::-webkit-scrollbar {
+    border-radius: 22px !important;
+}
+
+.view-in-closet-text {
+    font-size: 13px;
+}
+
+.clothing-item, .places-item {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem !important;
+    width: 8.5rem;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.img-closet {
+    width: 5rem !important;
+    height: auto;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.p-closet {
+    margin-top: 1rem !important;
+}
+
+
+.clothing-item p, .places-item p {
+    font-size: 0.8rem; 
+    text-align: center;
+    color: #333;
+}
+
+.pet-health {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem; 
+}
+
+
+.progress-container {
+    background-color: white;
+    height: 25px;  
+    width: 400px; 
+    border-radius: 12px;  
+        
+  }
+  
+  .progress-bar-color {
+    background-color: #5E4CC5;
+    height: 100%;
+    color: white;
+    font-size: 13.5px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .health-msg {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  
+  
+
+/* MEDIA QUERIES */
+@media (min-width: 320px)
+{
+    header {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 576px)
+{
+    header {
+        width: 100%;
+    }
+
+    .login-btn {
+        margin-left: .05rem;
+        padding: .4rem;
+        width: 15.85rem;
+        background-color: #5E4CC5;
+        border-radius: 12px;
+        border: 1.5px solid white;
+        text-align: left;
+        color: white;
+    }
+
+    .signin-btn {
+        margin-top: 2.2rem;
+        margin-left: 32%;
+        padding: .4rem;
+        width: 6rem;
+        background-color: #f6f3eb;
+        border-radius: 12px;
+        border: none;
+    }
+
+    .change-pass {
+        margin-left: 7rem;
+        padding: .25rem;
+        width: 7rem;
+    }
+    
+    .mood-summary {
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 6.5rem;
+    }
+    
+    .mood-card {
+        width: 26rem;
+        height: 20rem;
+        margin-left: 1.45rem;
+        margin-top: 3rem;
+    }
+    
+    .logout {
+        margin-left: 11.8rem;
+    }
+    
+    .profile-card {
+        width: 32rem;
+        height: 36rem;
+    }
+    
+}
+
+@media (min-width: 992px)
+{
+    header {
+        width: 100%;
+        height: 90px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }    
+
+    nav {
+        display: inline;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .login-btn {
+        width: 20.8rem;
+    }
+
+    .signin-btn {
+        margin-left: 36%;
+    }
+
+    .profile-name {
+        margin-left: 11rem;
+        margin-top: -8rem;
+        font-size: 24px;
+    }
+    
+    .profile-email {
+        margin-left: 11rem;
+        font-size: 18px;
+    }
+    
+    .profile-pic {
+        width: 150px;
+    }
+    
+    .change-pass {
+        margin-left: 11rem;
+        padding: .25rem;
+        width: 10rem;
+        font-size: 16px;
+    }
+    
+    .mood-summary {
+        margin-top: 1rem;
+        font-size: 18px;
+        margin-left: 15rem;
+    }
+    
+    .mood-card {
+        width: 44rem;
+        height: 19rem;
+        margin-top: 4.5rem;
+    }
+    
+    .logout {
+        margin-left: 20rem;
+        width: 6rem;
+        font-size: 16px;
+    }
+    
+    .flex-container-profile {
+        padding-top: 4rem;
+    }
+    
+    .profile-card {
+        width: 50rem;
+        height: 40rem;
+    }
+}
+
+@media (min-width: 1300px) 
+{
+    .homepage, .checkin-body {
+        background-image: url('/public/basicbg.png') ;
+        background-size: cover;
+        height: 100vh;
+        margin-top: .4rem;
+        border-radius: 22px;
+        margin-bottom: 0rem;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+}
